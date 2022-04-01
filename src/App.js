@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';  
 class Square extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +11,7 @@ class Square extends React.Component {
   render(){
     return(
       <button 
-        className="square" 
+        className="Square btn text-dark btn-default bg-light border" 
         onClick={()=>this.props.onClick()}
       >
         {this.props.value}
@@ -53,7 +54,7 @@ class Board extends React.Component {
     }
     return(
       <div>
-        <div className="status">{status}</div>
+        <div className="status"><h1>{status}</h1></div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
